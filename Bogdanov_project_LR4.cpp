@@ -12,7 +12,13 @@ void inputA(int& a) {
 }
 
 void inputB(int& b) {
-
+    do {
+        cout << "Введите положительное число B: ";
+        cin >> b;
+        if (b <= 0) {
+            cout << "Число должно быть положительным! Попробуйте снова.\n";
+        }
+    } while (b <= 0);
 }
 
 void calculateArea(int a, int b) {
