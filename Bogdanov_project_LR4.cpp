@@ -2,15 +2,31 @@
 using namespace std;
 
 void inputA(int& a) {
-
+    do {
+        cout << "Введите положительное число A: ";
+        cin >> a;
+        if (a <= 0) {
+            cout << "Число должно быть положительным! Попробуйте снова.\n";
+        }
+    } while (a <= 0);
 }
 
 void inputB(int& b) {
-
+    do {
+        cout << "Введите положительное число B: ";
+        cin >> b;
+        if (b <= 0) {
+            cout << "Число должно быть положительным! Попробуйте снова.\n";
+        }
+    } while (b <= 0);
 }
 
 void calculateArea(int a, int b) {
-
+    if (a <= 0 || b <= 0) {
+        cout << "Ошибка: A и B должны быть положительными числами!\n";
+        return;
+    }
+    cout << "Площадь прямоугольника: " << a * b << endl;
 }
 
 void calculatePerimeter(int a, int b) {
