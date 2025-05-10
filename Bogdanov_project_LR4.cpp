@@ -2,7 +2,13 @@
 using namespace std;
 
 void inputA(int& a) {
-
+    do {
+        cout << "Введите положительное число A: ";
+        cin >> a;
+        if (a <= 0) {
+            cout << "Число должно быть положительным! Попробуйте снова.\n";
+        }
+    } while (a <= 0);
 }
 
 void inputB(int& b) {
